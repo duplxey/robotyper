@@ -4,11 +4,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.duplxey.robotyper.Controller">
     <AnchorPane VBox.vgrow="ALWAYS">
         <children>
-            <TextArea id="messageInput" layoutX="14.0" layoutY="16.0" prefHeight="300.0" prefWidth="300.0" promptText="Enter your awesome message." />
-            <Button id="launchButton" fx:id="launchButton" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="300.0" text="Launch" />
+            <TextArea id="messageInput" fx:id="messageInput" layoutX="14.0" layoutY="16.0" prefHeight="300.0" prefWidth="300.0" promptText="Enter your awesome message." />
+            <Button id="launchButton" fx:id="launchButton" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" onAction="#launch" prefHeight="34.0" prefWidth="300.0" text="Launch" />
             <Text layoutX="330.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you like the program follow and ★ me on GitHub:" wrappingWidth="292.37109375" />
             <Hyperlink id="creditHyper" layoutX="326.0" layoutY="338.0" text="https://github.com/duplxey/robotyper" />
             <Slider id="keystrokeDelaySlider" fx:id="keystrokeDelaySlider" layoutX="330.0" layoutY="158.0" max="1000.0" prefHeight="14.0" prefWidth="278.0" showTickLabels="true" showTickMarks="true" value="100.0" />
@@ -33,9 +33,9 @@
                 </font>
             </Label>
             <Separator layoutX="330.0" layoutY="315.0" prefHeight="1.0" prefWidth="295.0" />
-         <Slider id="startDelaySlider" fx:id="keystrokeDelaySlider1" layoutX="330.0" layoutY="221.0" max="10.0" prefHeight="14.0" prefWidth="278.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+         <Slider id="startDelaySlider" fx:id="startDelaySlider" layoutX="330.0" layoutY="221.0" max="10.0" prefHeight="14.0" prefWidth="278.0" showTickLabels="true" showTickMarks="true" value="3.0" />
          <Label layoutX="330.0" layoutY="200.0" text="Start delay" />
-         <TextField id="spaceAmountInput" layoutX="449.0" layoutY="261.0" prefHeight="25.0" prefWidth="30.0" text="2" />
+         <TextField id="spaceAmountInput" fx:id="spacesInput" layoutX="449.0" layoutY="261.0" prefHeight="25.0" prefWidth="30.0" text="2" />
         </children>
     </AnchorPane>
 </VBox>
